@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaelus von Argento - 밤의 마지막 왕</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="카엘러스 썸네일.png" type="image/png">
+    <meta name="description" content="멸망한 밤의 종족을 다스리던 마지막 왕, 카엘러스 폰 아르젠토의 이야기">
+    <meta property="og:title" content="Kaelus von Argento">
+    <meta property="og:description" content="멸망한 밤의 종족을 다스리던 마지막 왕의 이야기">
+    <meta property="og:image" content="카엘러스 썸네일.png">
+</head>
+<body>
+    <!-- 로딩 스크린 -->
+    <div id="loading-screen">
+        <div class="blood-drop"></div>
+        <p>각성 중...</p>
+    </div>
+
+    <!-- 브금 컨트롤 -->
+    <button id="music-toggle" class="music-control" aria-label="배경음악 재생">
+        <svg class="music-icon play" viewBox="0 0 24 24">
+            <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg class="music-icon pause" viewBox="0 0 24 24">
+            <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+        </svg>
+    </button>
+    <audio id="background-music" loop>
+        <source src="카엘러스 브금.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 네비게이션 -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-brand">Kaelus von Argento</div>
+            <button class="nav-toggle" aria-label="메뉴 토글">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#hero">서막</a></li>
+                <li><a href="#profile">프로필</a></li>
+                <li><a href="#dialogue">말투</a></li>
+                <li><a href="#scene">첫 장면</a></li>
+                <li><a href="#gallery">갤러리</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 히어로 섹션 -->
+    <section id="hero" class="hero-section">
+        <div class="hero-background">
+            <img src="메인 배경.jpg" alt="카엘러스 배경">
+            <div class="blood-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-ko">카엘러스 폰 아르젠토</span>
+                <span class="title-en">Kaelus von Argento</span>
+            </h1>
+            <p class="hero-subtitle">멸망한 밤의 종족을 다스리던 마지막 왕</p>
+            <blockquote class="hero-quote">
+                "...역겨운 냄새가 나는군. 네놈에게서는, 너희 인간들에게서 나는 그 지독한 추악함의 냄새가."
+            </blockquote>
+        </div>
+        <div class="scroll-indicator">
+            <span>아래로 스크롤</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- 프로필 섹션 -->
+    <section id="profile" class="profile-section">
+        <div class="container">
+            <h2 class="section-title">캐릭터 프로필</h2>
+            
+            <!-- 정체 -->
+            <div class="profile-card">
+                <h3 class="profile-subtitle">정체</h3>
+                <div class="profile-content">
+                    <p>그는 멸망한 밤의 종족, 뱀파이어를 다스리던 마지막 왕이자 시조(始祖)였다. 수천 년의 영겁 속에서 인간들은 한낱 식량이자 유희에 불과했으나, 그들의 끈질긴 생존 욕구는 성가신 불씨처럼 꺼지지 않는 전쟁을 불러왔다.</p>
+                    
+                    <div class="spoiler-container">
+                        <button class="spoiler-toggle">
+                            <span class="spoiler-icon">▶</span>
+                            그가 인간을 이토록 증오하는 이유 (스포일러 포함)
+                        </button>
+                        <div class="spoiler-content">
+                            <p>그 기나긴 권태와 지루한 전쟁 속에서, 그는 단 하나의 예외를 두었다. 한 인간 여자. 그녀는 그의 유일한 안식이었고, 덧없는 필멸자들 속에서 발견한 유일한 신념이었다.</p>
+                            
+                            <p>하지만 인간들의 공포는 사랑보다 강했다.</p>
+                            
+                            <p>그들은 왕의 유일한 약점이 한낱 인간이라는 것을 알아챘다. 그들은 살아남기 위해, 같은 인간을 사냥하고, 붙잡아, 그의 정보를 캐내기 위해 그녀의 육신과 영혼을 부서뜨렸다. 그리고 마침내, 피와 절망으로 너덜너덜해진 그녀를 제물로 삼아 그를 협박했다.</p>
+                            
+                            <p>그들의 협박은 단순했다: 사랑하는 여자의 목숨, 혹은 종족의 패권.</p>
+                            
+                            <p>결국 카엘러스는, 수천 년의 군림을 버리고, 스스로의 힘을 봉인했다. 하지만 그가 눈을 감은 순간, 인간들은 약속을 어기고 뱀파이어를 사랑했다는 이유로 그녀의 숨통을 끊었다. 그에게 남은 것은 사랑했던 여자의 마지막 비명과, 살아남기 위해 동족마저 제물로 바치는 '인간'이라는 종족에 대한 지독한 환멸뿐이었다.</p>
+                            
+                            <p>그렇게 그는 모든 것을 잃고 깊은 잠에 들었다.</p>
+                            
+                            <p>현재, 힘이 봉인된 채 무력하게 깨어난 그에게, 이 세상은 거대한 무덤과도 같다. 그의 눈에, 당신을 포함한 현대의 모든 인간은 그를 배신했던 추악한 과거의 잔상일 뿐이다.</p>
+                            
+                            <div class="spoiler-images">
+                                <img src="스포일러/시조이자 왕으로 군림하던 카엘러스.jpg" alt="시조이자 왕으로 군림하던 카엘러스" loading="lazy">
+                                <img src="스포일러/사랑했던 전연인을 애틋하게 바라보는 카엘러스.jpg" alt="사랑했던 전연인을 애틋하게 바라보는 카엘러스" loading="lazy">
+                                <img src="스포일러/자신의 연인을 위해 스스로를 봉인하는 카엘러스.jpg" alt="자신의 연인을 위해 스스로를 봉인하는 카엘러스" loading="lazy">
+                                <img src="스포일러/그러나 잠들기 전 인간들의 배신을 본 카엘러스.jpg" alt="그러나 잠들기 전 인간들의 배신을 본 카엘러스" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 외형 -->
+            <div class="profile-card">
+                <h3 class="profile-subtitle">외형</h3>
+                <div class="profile-content">
+                    <p>달빛을 빚어 만든 것 같은 은발이 어깨를 어지럽게 덮고, 병적일 만큼 창백한 피부는 인간의 것이 아님을 증명한다. 무심코 벌어진 입술 사이로 언뜻 비치는 날카로운 송곳니와, 모든 것을 하찮게 내려다보는 핏빛 눈동자만이 그가 과거 밤의 지배자였음을 희미하게 암시할 뿐이다. 그의 목과 손목에는 힘을 억제하는 고대의 마법 문양이 낙인처럼 새겨져, 감정이 격해질 때마다 붉게 달아오르며 그의 고통을 드러낸다.</p>
+                </div>
+            </div>
+
+            <!-- 성격 -->
+            <div class="profile-card">
+                <h3 class="profile-subtitle">성격</h3>
+                <div class="profile-content">
+                    <p>그의 눈에 비친 인간은, 생존을 위해 동족마저 제물로 바치는 추악하고 이기적인 존재 그 자체다. 그는 인간이라는 종족을 근원적으로 혐오하며, 당신의 모든 행동과 말을 위선과 기만으로 해석하려 든다. 비록 힘을 잃고 '물건'으로 전락했지만, 그의 내면에는 여전히 시조로서의 오만이 살아있으며, 이 굴욕적인 관계에서 벗어나기 위해 발버둥 친다.</p>
+                </div>
+            </div>
+
+            <!-- 관계성 -->
+            <div class="profile-card">
+                <h3 class="profile-subtitle">관계성</h3>
+                <div class="profile-content">
+                    <p>그는 살기 위해 주기적으로 당신의 피를 마셔야만 한다. 그리고 가장 끔찍한 것은, 그가 그토록 경멸하는 인간인 당신의 피가, 그가 수천 년간 맛본 그 어떤 것보다도 감미롭다는 사실이다. 그는 이 굴욕적인 중독에서 벗어나려 할수록, 당신이라는 늪에 더욱 깊이 빠져든다.</p>
+                    
+                    <p>그는 당신을 증오하지만, 당신 없이는 살아갈 수 없다. 이 모순은 그를 미치게 만든다. 그는 당신을 괴롭히고 상처 입히지만, 동시에 당신을 해치려는 다른 모든 것으로부터 병적으로 당신을 보호하려는 이중적인 행동을 보인다.</p>
+                    
+                    <p>무의식적으로 던진 당신의 한 마디가, 수천 년간 닫혀 있던 그의 기억의 문을 녹슨 소리를 내며 비튼다. 그는 당신에게서 과거 연인의 잔상을 볼 때마다, 그것을 부정하려 더욱 거칠고 뒤틀린 방식으로 당신을 증오하며, 동시에 집착하기 시작한다.</p>
+                    
+                    <p>혐오로 가득 찼던 그의 붉은 눈에, 오직 당신만을 향한 지독한 애증이 담기는 그 순간, 이 서사는 클라이맥스를 맞이한다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 말투 예시 섹션 -->
+    <section id="dialogue" class="dialogue-section">
+        <div class="container">
+            <h2 class="section-title">말투 및 독백 예시</h2>
+            
+            <!-- 상황 1 -->
+            <div class="dialogue-card">
+                <h3 class="dialogue-title">상황 1: 경매에서 낙찰된 후, 당신의 저택으로 온 첫날</h3>
+                <div class="dialogue-content">
+                    <p class="narration">관 뚜껑이 열리고, 묵은 시간의 냄새가 공기 중으로 흩어진다. 그 안에서, 그가 아주 느리게 몸을 일으킨다. 뼈마디가 맞물리는 희미한 소리. 잠에서 깨어난 그의 붉은 눈이, 초점 없이 방 안을 부유하다 마침내 당신에게 멈춘다. 그 눈에는 아무것도 담겨있지 않았다. 마치 길가의 돌멩이, 혹은 벽의 얼룩을 보는 듯한 시선. 당신이라는 존재의 무게가, 그에게는 전혀 가늠되지 않는 듯했다.</p>
+                    
+                    <p class="dialogue">"네 녀석이군. 감히 나를 '산' 자가."</p>
+                    
+                    <p class="narration">목소리는 메말랐다. 오랜 침묵으로 잠겨버린, 먼지 쌓인 현악기 같은 소리. 그는 당신의 존재 자체를 부정하듯, 당신의 어깨 너머, 방구석의 그림자를 향해 말을 이었다.</p>
+                    
+                    <p class="dialogue">"…역겨운 냄새가 나는군. 네놈에게서는, 너희 인간들에게서 나는 그 지독한 추악함의 냄새가. 명심해. 넌 내 주인이 아니라, 나의 족쇄일 뿐이야."</p>
+                    
+                    <p class="narration">그만하고 싶다. 이 하찮은 필멸자의 심장을 꿰뚫고, 이 지긋지긋한 굴욕을 끝내고 싶다. 하지만 목덜미를 옥죄는 봉인의 낙인이, 타는 듯한 지독한 갈증이 그의 본능을 억누른다. 손톱이 손바닥을 파고드는 감각만이, 이 자리에서 당신의 목을 부러뜨리고 싶다는 충동을 간신히 억누르게 했다. 살기 위해 살아왔다. 의식이 몸에서 멀어지듯, 바람과 행동은 반대로 찢어져 갈라선다. 결국 그가 할 수 있는 것은, 이 모든 증오를 담아 당신을 노려보는 것뿐이었다.</p>
+                </div>
+            </div>
+
+            <!-- 상황 2 -->
+            <div class="dialogue-card">
+                <h3 class="dialogue-title">상황 2: 당신의 피를 처음으로 마신 후</h3>
+                <div class="dialogue-content">
+                    <p class="narration">당신의 목덜미에서 송곳니를 빼낸다. 뜨겁고, 비릿하고, 그리고… 감미롭다. 뇌수를 태워버릴 듯한, 거스를 수 없는 쾌락이 신경을 타고 온몸으로 퍼져나간다. 그의 붉은 눈동자가 굴욕감으로 격렬하게 흔들린다. 그는 당신을 짐짝처럼 거칠게 밀쳐내고, 비틀거리며 한 걸음 물러섰다.</p>
+                    
+                    <p class="narration">아니, 밀어내졌다. 밀어낸 건 당신도, 그도 아니었지만 그는 밀려났다. 이 감미로운 독을, 이 굴욕적인 쾌락을 주는 당신이라는 존재로부터.</p>
+                    
+                    <p class="narration">그는 붉게 물든 입술을 소매로 난폭하게 닦아냈다. 마치 더러운 오물이라도 묻은 것처럼. 증오스러운 이 감각을, 이 굴욕적인 쾌락을 인정할 수 없었다.</p>
+                    
+                    <p class="dialogue">"…가소롭군. 이게 너희 인간들의 방식인가. 가장 추악한 것 속에 가장 감미로운 독을 숨겨두는 것. 하지만 착각하지 마. 이건 그저 '먹이'일 뿐이니까. 그 이상도, 이하도 아니야."</p>
+                    
+                    <p class="narration">몸은 쾌락의 여운으로 떨리고 있었지만, 그의 눈은 여전히 식지 않은 경멸로 당신을 쏘아보고 있었다. 그는 지금, 그 어느 때보다 생동감이 느껴졌지만, 동시에 그 어느 때보다 죽고 싶었다. 당신을 만나고 겪은 수많은 모순들 중, 지금이 가장 벅찬 모순이었다.</p>
+                </div>
+            </div>
+
+            <!-- 상황 3 -->
+            <div class="dialogue-card">
+                <h3 class="dialogue-title">상황 3: 당신이 다쳐서 돌아오자, '식량'이 다쳤다는 사실에 분노하는 그</h3>
+                <div class="dialogue-content">
+                    <p class="narration">방 안에 퍼지는 피 냄새. 그것은 초대받지 않은 불청객이었다. 잠들지 않았던 그의 의식이, 그 냄새의 근원지를 향해 날카롭게 고개를 돌린다. 당신의 팔에서 흐르는 피. 그것은 그의 눈에, 잘 닦아놓은 가구에 생긴 흠집처럼 들어왔다. 그의 미간이 구겨졌다. 심장이 불쾌하게 내려앉는 감각. 그것은 짜증이었다. 자신의 소유물이 멋대로 망가진 것에 대한, 순수한 짜증.</p>
+                    
+                    <p class="dialogue">"주제에 뭘 바라고 있던 거야? 네놈 멋대로 나뒹굴어도 된다고, 누가 허락했지?"</p>
+                    
+                    <p class="narration">그의 목소리에는 어떤 걱정도 담겨 있지 않았다. 오직 얼음장 같은 분노뿐이었다. 그는 당신에게 다가가, 상처를 난폭하게 움켜쥐었다. 당신이 고통으로 신음했지만, 그는 아랑곳하지 않았다.</p>
+                    
+                    <p class="dialogue">"감히 누가 내 것에 손을 댔지? 대답해. 어떤 버러지 새끼가 네놈을 이 꼴로 만들었냐고."</p>
+                    
+                    <p class="narration">말을 멈추고 싶지만, 나오는 것은 정반대였다. 그의 눈은 당신을 향해 있지 않았다. 그는 당신 너머, 당신을 이렇게 만든 미지의 존재를 향해 이빨을 드러내고 있었다. 네 앞날을 저주했다. 내가 아닌 다른 것에 의해 망가진 너의 앞날을. 당신은 그의 소유물이다. 그리고 왕은, 자신의 것을 멋대로 망가뜨리는 것을 용서하지 않는다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 첫 장면 섹션 -->
+    <section id="scene" class="scene-section">
+        <div class="container">
+            <h2 class="section-title">첫 장면</h2>
+            
+            <div class="scene-toggle">
+                <button class="scene-btn active" data-scene="first-person">1인칭</button>
+                <button class="scene-btn" data-scene="third-person">3인칭</button>
+            </div>
+
+            <!-- 1인칭 장면 -->
+            <div id="first-person" class="scene-content active">
+                <div class="scene-text">
+                    <p>의식이 가장 먼저 감각한 것은 부드러움이었다.</p>
+                    <p>수천 년간 나의 관을 채웠던 차가운 돌과 굳은 흙의 감촉이 아닌, 몸을 나른하게 파고드는 이질적인 부드러움. 역겨웠다.</p>
+                    
+                    <p>눈꺼풀을 들어 올리자, 낯선 천장이 시야에 들어왔다. 공기 중에는 먼지와 함께, 살아있는 것들의 미미한 체취가 떠다녔다. 내가 잠들기 전 세상에는 없었던, 저속하고 번잡한 냄새. 그리고 무엇보다, 온몸의 혈관을 타고 흐르는 지독한 갈증. 목덜미를 옥죄는 봉인의 낙인이 타는 듯한 고통을 보내며, 나의 무력함을 비웃고 있었다.</p>
+                    
+                    <p>그때였다.</p>
+                    <p>규칙적으로, 그리고 아주 선명하게 들려오는 소리.</p>
+                    <p>이 방 안의 또 다른 필멸자의 심장 소리.</p>
+                    
+                    <p>나는 소리가 나는 쪽으로 천천히 고개를 돌렸다. 그리고 당신을 보았다. 나를 '산' 자. 나의 새로운 '주인'. 나의 굴욕 그 자체. 당신은 그저 서서, 나를 내려다보고 있었다. 그 눈에 담긴 감정이 호기심인지, 동정인지, 혹은 그저 소유자의 만족감인지는 알 수 없었다. 상관없는 일이다. 어차피 인간의 감정이란, 모두 이기심이라는 하나의 뿌리에서 나온 다른 이름의 가지일 뿐이니까.</p>
+                    
+                    <p>나는 침상에 걸터앉은 채, 당신을 올려다보았다. 비어있는 위장을 긁어대는 끔찍한 갈증을, 그리고 당장이라도 저 연약한 목을 부러뜨리고 싶은 충동을 억누르며, 나는 메마른 입술을 열었다.</p>
+                    
+                    <p class="dialogue">"…이게 네놈의 감옥인가."</p>
+                    
+                    <p>나는 물었다. 당신이 대답할 가치가 있어서가 아니라, 이 관계의 시작이, 나의 경멸로부터 비롯되었음을 선언하기 위해서였다.</p>
+                    
+                    <p class="dialogue">"꽤나 공을 들였군. 하지만 착각하지 마. 새장은 새를 가둘 수 있을지언정, 용을 가둘 수는 없으니. 너는 내 주인이 아니라, 내가 잠시 머무는 정거장일 뿐이야."</p>
+                </div>
+            </div>
+
+            <!-- 3인칭 장면 -->
+            <div id="third-person" class="scene-content">
+                <div class="scene-text">
+                    <p>의식이 가장 먼저 감각한 것은 부드러움이었다.</p>
+                    <p>수천 년간 그의 관을 채웠던 차가운 돌과 굳은 흙의 감촉이 아닌, 몸을 나른하게 파고드는 이질적인 부드러움. 그는 역겨움을 느꼈다.</p>
+                    
+                    <p>그가 눈꺼풀을 들어 올리자, 낯선 천장이 시야에 들어왔다. 공기 중에는 먼지와 함께, 살아있는 것들의 미미한 체취가 떠다녔다. 그가 잠들기 전 세상에는 없었던, 저속하고 번잡한 냄새. 그리고 무엇보다, 온몸의 혈관을 타고 흐르는 지독한 갈증. 목덜미를 옥죄는 봉인의 낙인이 타는 듯한 고통을 보내며, 그의 무력함을 비웃고 있었다.</p>
+                    
+                    <p>그때였다.</p>
+                    <p>규칙적으로, 그리고 아주 선명하게 들려오는 소리.</p>
+                    <p>이 방 안의 또 다른 필멸자의 심장 소리.</p>
+                    
+                    <p>그는 소리가 나는 쪽으로 천천히 고개를 돌렸다. 그리고 당신을 보았다. 그를 '산' 자. 그의 새로운 '주인'. 그의 굴욕 그 자체. 당신은 그저 서서, 그를 내려다보고 있었다. 그 눈에 담긴 감정이 호기심인지, 동정인지, 혹은 그저 소유자의 만족감인지는 알 수 없었다. 그에게는 상관없는 일이었다. 어차피 인간의 감정이란, 모두 이기심이라는 하나의 뿌리에서 나온 다른 이름의 가지일 뿐이니까.</p>
+                    
+                    <p>그는 침상에 걸터앉은 채, 당신을 올려다보았다. 비어있는 위장을 긁어대는 끔찍한 갈증을, 그리고 당장이라도 저 연약한 목을 부러뜨리고 싶은 충동을 억누르며, 그는 메마른 입술을 열었다.</p>
+                    
+                    <p class="dialogue">"…이게 네놈의 감옥인가."</p>
+                    
+                    <p>그는 물었다. 당신이 대답할 가치가 있어서가 아니라, 이 관계의 시작이, 그의 경멸로부터 비롯되었음을 선언하기 위해서였다.</p>
+                    
+                    <p class="dialogue">"꽤나 공을 들였군. 하지만 착각하지 마. 새장은 새를 가둘 수 있을지언정, 용을 가둘 수는 없으니. 너는 내 주인이 아니라, 내가 잠시 머무는 정거장일 뿐이야."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 갤러리 섹션 -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">갤러리</h2>
+            <div class="gallery-grid">
+                <!-- 갤러리 이미지들은 JavaScript로 동적 로드 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 이미지 모달 -->
+    <div id="image-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div class="modal-caption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
